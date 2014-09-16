@@ -16,3 +16,36 @@
 .smallImg {
     height: 4em;
 }
+
+
+.repeated-item.ng-leave {
+  -webkit-animation:0.5s my_animation;
+  -moz-animation:0.5s my_animation;
+  -o-animation:0.5s my_animation;
+  animation:0.5s my_animation;
+}
+ 
+@keyframes my_animation {
+  from {
+    max-height: 90px;
+    opacity: 1;
+    left: 0;
+  }
+  to {
+    max-height: 0;
+    opacity: 0;
+    left: -50px;
+  }
+    
+    @-webkit-keyframes my_animation {
+  from {
+    max-height: 90px;
+    opacity: 1;
+    left: 0;
+  }
+  to {
+    max-height: 0;
+    opacity: 0;
+    left: -50px;
+  }
+}

@@ -33,13 +33,13 @@ angular.module('starter', ['ionic'])
       cash = cash % 10;    
       
       for (var i = 0; i < hundreds; i++) {
-        $scope.array.push({'value':'hundred'});
+        $scope.array.push({'value':'hundred', 'numberValue':100});
       }
       for (var j = 0; j < fifties; j++) {
-        $scope.array.push({'value':'fifty'});
+        $scope.array.push({'value':'fifty', 'numberValue':50});
       }
         for (var k = 0; k < tens; k++) {
-        $scope.array.push({'value':'ten'});
+        $scope.array.push({'value':'ten', 'numberValue':10});
       }
     }
     
@@ -52,7 +52,15 @@ angular.module('starter', ['ionic'])
         $scope.backup = $scope.array;
         $scope.onTable.push($scope.array[$scope.slideIndex]);
         $scope.array.splice($scope.slideIndex,1);
+        $ionicSlideBoxDelegate.update();
         console.log($scope.onTable);
+    }
+    
+    $scope.returnnote = function() {
+        $scope.array.push($scope.onTable[$scope.onTable.length - 1]);
+        $scope.onTable.splice($scope.onTable.length - 1,1);
+        $ionicSlideBoxDelegate.update();
+
     }
 
     $scope.next = function() {
