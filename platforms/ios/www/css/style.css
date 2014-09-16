@@ -1,0 +1,18 @@
+.item-image {
+    width: 60%;
+    margin-left: 20%;
+}
+
+
+.grey {
+    background: gray;
+}
+
+.whicons {
+    color: #fff;
+    font-size: 2em;
+}
+
+.smallImg {
+    height: 4em;
+}
