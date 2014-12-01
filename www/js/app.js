@@ -18,7 +18,7 @@ angular.module('starter', ['ionic'])
   });
 }).controller('MyCtrl', function($scope, $ionicSlideBoxDelegate) {
 
-    $scope.cash = 378;
+    $scope.cash = 599;
     $scope.array = [];
     
     $scope.calculate = function(cash) {
